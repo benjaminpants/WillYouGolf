@@ -20,7 +20,7 @@ if (golfball_current_phase == 0)
 	
 	golfball_current_strength = clamp(point_distance(x,y,mouse_x,mouse_y) / 7, 5, 50)
 
-	if (floor(vspeed) == 0 and round(hspeed) == 0 and not place_free(x,y+clamp(3 * golfball_grav_mult, -3, 3)))
+	if (floor(vspeed) == 0 and (round(hspeed) == 0 or place_meeting(x, y, obj_conveyor_belt)) and not place_free(x,y+clamp(3 * golfball_grav_mult, -3, 3)))
 	{
 		golfball_still = true
 		golfball_air_puts = golfball_max_air_puts
