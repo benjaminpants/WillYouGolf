@@ -1,0 +1,26 @@
+{
+	"id":"scp018",
+	"name":"SCP-018",
+	"description":"SCP-018 has the appearance of a Super Ball made by the Wham-O company in 1969. SCP-018 was able to bounce with over two hundred percent (200%) efficiency, but now only bounces at 100% efficiency",
+	"allowSnailLines":false,
+	"parentCharacter":"golfball",
+	"overrideOnly":true,
+	"useSlitherSound":false,
+	"useSnailVoice":false,
+	"renderEyes":false,
+	"speedMultiplier":2,
+	"underwaterFriction":0.95,
+	"jumpMultiplier":1,
+	"gravityMultiplier":1,
+	"conveyorMultiplier":1,
+	"bubbleScale":0.5,
+	"trailColor":"c_red",
+	"flareColor":"c_maroon",
+	"deathColor":"c_red",
+	"mainColor":"c_red",
+	"jumps":1
+
+
+
+
+}

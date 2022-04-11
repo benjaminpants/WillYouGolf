@@ -1,0 +1,25 @@
+{
+	"id":"golfball",
+	"name":"Golf Ball",
+	"description":"The original golfball. The only one that counts in speedruns.(IM WATCHING YOU)",
+	"allowSnailLines":false,
+	"overrideOnly":true,
+	"useSlitherSound":false,
+	"useSnailVoice":false,
+	"renderEyes":false,
+	"speedMultiplier":2,
+	"underwaterFriction":0.95,
+	"jumpMultiplier":1,
+	"gravityMultiplier":1,
+	"conveyorMultiplier":1,
+	"bubbleScale":0.5,
+	"trailColor":"obj_levelstyler.col_player_trail",
+	"flareColor":"obj_levelstyler.col_snail_flare",
+	"deathColor":"obj_levelstyler.col_snail_death",
+	"mainColor":"obj_levelstyler.col_snail",
+	"jumps":1
+
+
+
+
+}

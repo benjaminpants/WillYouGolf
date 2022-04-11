@@ -1,0 +1,26 @@
+{
+	"id":"squidball",
+	"name":"Squid's Ball",
+	"description":"We found it, Squid's overpowered ball.",
+	"allowSnailLines":false,
+	"parentCharacter":"golfball",
+	"overrideOnly":true,
+	"useSlitherSound":false,
+	"useSnailVoice":false,
+	"renderEyes":false,
+	"speedMultiplier":2,
+	"underwaterFriction":0.95,
+	"jumpMultiplier":1,
+	"gravityMultiplier":1,
+	"conveyorMultiplier":1,
+	"bubbleScale":0.5,
+	"trailColor":"obj_levelstyler.col_ai",
+	"flareColor":"obj_levelstyler.col_ai",
+	"deathColor":"obj_levelstyler.col_ai",
+	"mainColor":"obj_levelstyler.col_ai",
+	"jumps":1
+
+
+
+
+}

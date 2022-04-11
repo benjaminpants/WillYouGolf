@@ -1,0 +1,26 @@
+{
+	"id":"stoneball",
+	"name":"A Rock",
+	"description":"This is literally a rock. Why.",
+	"allowSnailLines":false,
+	"parentCharacter":"golfball",
+	"overrideOnly":true,
+	"useSlitherSound":false,
+	"useSnailVoice":false,
+	"renderEyes":false,
+	"speedMultiplier":2,
+	"underwaterFriction":0.95,
+	"jumpMultiplier":1,
+	"gravityMultiplier":1,
+	"conveyorMultiplier":1,
+	"bubbleScale":0.5,
+	"trailColor":"c_dkgray",
+	"flareColor":"c_dkgray",
+	"deathColor":"c_dkgray",
+	"mainColor":"c_dkgray",
+	"jumps":1
+
+
+
+
+}
