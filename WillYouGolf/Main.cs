@@ -41,17 +41,14 @@ namespace WillYouGolf
             data.GameObjects.ByName("obj_music_credits").EventHandlerFor(EventType.Other, EventSubtypeOther.User0, data.Strings, data.Code, data.CodeLocals)
                 .AppendGMLSafe("play_music = mus_GOLFCREDITS");
 
-            Hooker.HookCode("gml_Object_obj_input_overrider_end_Other_10",
-            @"
-            setting_air_cat_probability = 0
-	        setting_fireworks_probability = 0");
+            Hooker.HookCode("gml_Object_obj_input_overrider_end_Other_10", GMLkvp["obj_input_overrider_end_Other_10"]);
 
             Hooker.HookFunction("scr_ai_set_difficulty_multi", 
             @"
             #orig#()
             setting_air_cat_probability = 0
 	        setting_fireworks_probability = 0");
-            
+
         }
     }
 }
