@@ -8,3 +8,4 @@ golfball_side_bounce_power = 0.82
 golfball_current_angle = 0
 golfball_still = false
 golfball_grav_mult = 1
+unicorn_power = false

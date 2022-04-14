@@ -51,3 +51,8 @@ if (inbubble or (golfball_air_puts != 0) or golfball_still)
 	
 
 }
+
+if (unicorn_power)
+{
+	draw_sprite_ext(spr_final_boss_p2b,2, x, y, 0.1, 0.1, random(360), c_white, 0.8)
+}

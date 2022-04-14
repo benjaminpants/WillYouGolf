@@ -1,6 +1,12 @@
 image_xscale = 0.5
 image_yscale = 0.5
 
+unicorn_power = (instance_exists(obj_boss) or instance_exists(obj_boss_p2))
+
+if (unicorn_power)
+{
+	golfball_bounce_power *= 0.98
+}
 
 if (golfball_current_phase == 0)
 {
@@ -23,7 +29,7 @@ if (golfball_current_phase == 0)
 	if (floor(vspeed) == 0 and (round(hspeed) == 0 or place_meeting(x, y, obj_conveyor_belt)) and not place_free(x,y+clamp(3 * golfball_grav_mult, -3, 3)))
 	{
 		golfball_still = true
-		golfball_air_puts = golfball_max_air_puts
+		golfball_air_puts = golfball_max_air_puts + (unicorn_power ? 1 : 0)
 	}
 	else
 	{
@@ -42,7 +48,14 @@ if (golfball_current_phase == 0)
 		}
 		else
 		{
-			golfball_current_strength *= 0.6
+			if (golfball_air_puts == 1 and (instance_exists(obj_boss) or instance_exists(obj_boss_p2)))
+			{
+				golfball_current_strength *= 0.38
+			}
+			else
+			{
+				golfball_current_strength *= 0.6
+			}
 		}
 	}
 	
