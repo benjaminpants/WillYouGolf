@@ -1,0 +1,26 @@
+{
+	"id":"dirtball",
+	"name":"Dirt Ball",
+	"description":"A ball of dirt. Don't go too fast!",
+	"allowSnailLines":false,
+	"parentCharacter":"golfball",
+	"overrideOnly":true,
+	"useSlitherSound":false,
+	"useSnailVoice":false,
+	"renderEyes":false,
+	"speedMultiplier":2,
+	"underwaterFriction":0.95,
+	"jumpMultiplier":1,
+	"gravityMultiplier":1,
+	"conveyorMultiplier":1,
+	"bubbleScale":0.5,
+	"trailColor":"make_colour_rgb(116, 75, 15)",
+	"flareColor":"make_colour_rgb(116, 75, 15)",
+	"deathColor":"make_colour_rgb(116, 75, 15)",
+	"mainColor":"make_colour_rgb(116, 75, 15)",
+	"jumps":1
+
+
+
+
+}

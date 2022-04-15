@@ -1,7 +1,7 @@
 {
 	"id":"golfball",
 	"name":"Golf Ball",
-	"description":"The original golfball. The only one that counts in speedruns.(IM WATCHING YOU)",
+	"description":"The original golfball, verified possible to beat the game with.",
 	"allowSnailLines":false,
 	"overrideOnly":true,
 	"useSlitherSound":false,

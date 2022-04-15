@@ -26,7 +26,7 @@ if (golfball_current_phase == 0)
 	
 	golfball_current_strength = clamp(point_distance(x,y,mouse_x,mouse_y) / 7, 5, 50)
 
-	if (floor(vspeed) == 0 and (round(hspeed) == 0 or place_meeting(x, y, obj_conveyor_belt)) and not place_free(x,y+clamp(3 * golfball_grav_mult, -3, 3)))
+	if ((floor(vspeed) == 0 or (global.current_character == #char_scp018#)) and (round(hspeed) == 0 or place_meeting(x, y, obj_conveyor_belt)) and (not place_free(x,y+clamp(3 * golfball_grav_mult, -3, 3)) or (global.current_character == #char_scp018#)))
 	{
 		golfball_still = true
 		golfball_air_puts = golfball_max_air_puts + (unicorn_power ? 1 : 0)
@@ -48,7 +48,7 @@ if (golfball_current_phase == 0)
 		}
 		else
 		{
-			if (golfball_air_puts == 1 and (instance_exists(obj_boss) or instance_exists(obj_boss_p2)))
+			if (golfball_air_puts == 1 and unicorn_power)
 			{
 				golfball_current_strength *= 0.38
 			}
@@ -136,7 +136,10 @@ else
 {
 	vspeed *= 0.94
 }
-hspeed *= underwater ? golfball_friction[1] : golfball_friction[0]
+if (global.current_character != #char_rubberball#)
+{
+	hspeed *= underwater ? golfball_friction[1] : golfball_friction[0]
+}
 
 water_current = collision_point(x, y, obj_underwater_current, 1, 1)
 timesincelastjump++
@@ -168,6 +171,16 @@ if place_meeting(x, y, obj_conveyor_belt)
 
 if (not place_free(x + hspeed,y))
 {
+	if (abs(hspeed) >= 30 and (global.current_character == #char_dirtball#) and snailtype == 0)
+	{
+		global.last_death_by_hspeed = hspeed
+		global.last_death_by_vspeed = vspeed
+		global.last_death_by_image_anlge = 0
+		global.last_death_by = -1
+		scr_death_feedback_for_obj(other)
+		global.last_death_by_image_anlge = 0
+		scr_player_death(point_direction(0, 0, hspeed, vspeed), abs(hspeed) * 1.2)
+	}
 	hspeed *= -golfball_side_bounce_power
 	if (snailtype == 0)
 	{
@@ -205,13 +218,31 @@ if (not place_free(x,y + vspeed))
 			}
 		}
 		vspeed = 0
+		if (global.current_character == #char_rubberball#)
+		{
+			hspeed *= underwater ? golfball_friction[1] : golfball_friction[0]
+		}
 	}
 	else
 	{
+		if (abs(vspeed) >= 30 and (global.current_character == #char_dirtball#) and snailtype == 0)
+		{
+			global.last_death_by_hspeed = hspeed
+			global.last_death_by_vspeed = vspeed
+			global.last_death_by_image_anlge = 0
+			global.last_death_by = -1
+			scr_death_feedback_for_obj(other)
+			global.last_death_by_image_anlge = 0
+			scr_player_death(point_direction(0, 0, hspeed, vspeed), abs(vspeed) * 1.2)
+		}
 		vspeed *= -golfball_bounce_power
 		if (snailtype == 0)
 		{
 			audio_play_sound(choose(sou_golf_land, sou_golf_land_b, sou_golf_land_c),0,false)
+		}
+		if (global.current_character == #char_rubberball#)
+		{
+			hspeed *= underwater ? golfball_friction[1] : golfball_friction[0]
 		}
 	}
 	if (inbubble)

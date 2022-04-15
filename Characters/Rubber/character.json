@@ -1,0 +1,26 @@
+{
+	"id":"rubberball",
+	"name":"Rubber Ball",
+	"description":"This super amazing ball is out of rubber! It can now bounce further then any ball before! You only lose speed when you bounce!",
+	"allowSnailLines":false,
+	"parentCharacter":"golfball",
+	"overrideOnly":true,
+	"useSlitherSound":false,
+	"useSnailVoice":false,
+	"renderEyes":false,
+	"speedMultiplier":2,
+	"underwaterFriction":0.95,
+	"jumpMultiplier":1,
+	"gravityMultiplier":1,
+	"conveyorMultiplier":1,
+	"bubbleScale":0.5,
+	"trailColor":"obj_levelstyler.col_wall_outline",
+	"flareColor":"obj_levelstyler.col_wall_outline",
+	"deathColor":"obj_levelstyler.col_wall_outline",
+	"mainColor":"obj_levelstyler.col_wall_outline",
+	"jumps":1
+
+
+
+
+}
