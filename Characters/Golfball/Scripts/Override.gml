@@ -258,8 +258,54 @@ if (not place_free(x,y + vspeed))
 	}
 }
 
+if (hspeed > 0)
+{
+	lookdir = 1
+}
 
+if (hspeed < 0)
+{
+	lookdir = -1
+}
 
+if (global.current_character == #char_magball#)
+{
+	attempty = 0
+	attempts = 0
+	ceiling_y = 0
+	floor_y = 0
+	while (!place_free(x,y-attempty))
+	{
+		if (attempts >= 1080)
+		{
+			return false
+		}
+		attempty++
+		attempts++
+	}
+	ceiling_y = attempty
+	attempts = 0
+	attempty = 0
+	while (!place_free(x,y+attempty))
+	{
+		if (attempts >= 1080)
+		{
+			return false
+		}
+		attempty++
+		attempts++
+	}
+	floor_y = attempty
+	
+	if (floor_y <= ceiling_y)
+	{
+		target_gravity = 1
+	}
+	else
+	{
+		target_gravity = -1
+	}
+}
 
 
 return false

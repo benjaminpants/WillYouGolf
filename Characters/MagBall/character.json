@@ -1,0 +1,26 @@
+{
+	"id":"magball",
+	"name":"Magnet Ball",
+	"description":"A magnetic ball that flips its gravity depending on whether the ceiling or floor is closer!",
+	"allowSnailLines":false,
+	"parentCharacter":"golfball",
+	"overrideOnly":true,
+	"useSlitherSound":false,
+	"useSnailVoice":false,
+	"renderEyes":false,
+	"speedMultiplier":2,
+	"underwaterFriction":0.95,
+	"jumpMultiplier":1,
+	"gravityMultiplier":1,
+	"conveyorMultiplier":1,
+	"bubbleScale":0.5,
+	"trailColor":"make_colour_rgb(0, 0, 255)",
+	"flareColor":"make_colour_rgb(128, 0, 128)",
+	"deathColor":"make_colour_rgb(255, 0, 0)",
+	"mainColor":"make_colour_rgb(255, 0, 0)",
+	"jumps":1
+
+
+
+
+}

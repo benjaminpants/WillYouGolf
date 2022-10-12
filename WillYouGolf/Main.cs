@@ -39,11 +39,12 @@ namespace WillYouGolf
 
             data.HookCode("gml_Object_obj_input_overrider_end_Other_10", GMLkvp["obj_input_overrider_end_Other_10"]);
 
-            data.HookFunction("scr_ai_set_difficulty_multi", 
+            data.HookFunction("scr_ai_set_difficulty_multi",
             @"
             #orig#()
             setting_air_cat_probability = 0
-	        setting_fireworks_probability = 0");
+	        setting_fireworks_probability = 0
+            setting_laser_probability *= 0.3");
 
         }
     }
